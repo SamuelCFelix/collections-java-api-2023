@@ -21,11 +21,10 @@ public class CatalogoLivros {
                 possuiEsseAutor = true;
             }
         }
-        if (possuiEsseAutor){
-            return livrosDoAutor;
-        } else
+        if (!possuiEsseAutor){
             System.out.print("\n Você não possui nenhum livro com esse autor\n");
-        return livrosDoAutor = null;
+        }
+        return livrosDoAutor;
     }
     public List<Livro> pesquisarPorIntervaloAnos(int anoInicial, int anoFinal){
         List<Livro> livrosEntreAnos = new ArrayList<>();
@@ -36,11 +35,10 @@ public class CatalogoLivros {
                 contemLivrosEntreAnos = true;
             }
         }
-        if (contemLivrosEntreAnos){
-            return livrosEntreAnos;
-        } else
+        if (!contemLivrosEntreAnos) {
             System.out.print("\n Você não possui nenhum livro entre esses anos\n");
-        return livrosEntreAnos = null;
+        }
+        return livrosEntreAnos;
     }
     public Livro pesquisarPorTitulo(String titulo){
         Livro pesquisadoPorTitulo = null;
@@ -52,10 +50,9 @@ public class CatalogoLivros {
                 break;
             }
         }
-        if (pesquisaTitulo){
-            return pesquisadoPorTitulo;
-        } else
+        if (!pesquisaTitulo) {
             System.out.print("\n Você não possui nenhum livro com esse título\n");
+        }
         return pesquisadoPorTitulo;
     }
 
